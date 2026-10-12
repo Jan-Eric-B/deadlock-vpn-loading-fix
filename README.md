@@ -46,7 +46,8 @@ Deadlock tries to do this but fails. This results in the endless loading screen.
 ## Fix 1: press F9 (recommended)
 
 1. Find your Deadlock folder: in Steam, right-click **Deadlock** → **Manage** → **Browse local files**.
-2. Open `game\citadel\cfg\`.
+   With a default Steam install, this is `C:\Program Files (x86)\Steam\steamapps\common\Deadlock`.
+2. Open `game\citadel\cfg\` (by default `C:\Program Files (x86)\Steam\steamapps\common\Deadlock\game\citadel\cfg\`).
 3. Copy [`autoexec.cfg`](autoexec.cfg) from this repository into that folder.
    If an `autoexec.cfg` already exists, open it and add this line instead of replacing the file:
    ```
@@ -79,7 +80,7 @@ Deadlock runs `autoexec.cfg` automatically on every start. Steam updates and _"V
 
 The script exits when Deadlock is closed. Keep Deadlock as the activbe window while it loads. It only presses `F9` while Deadlock is in the front.
 
-**Finding the game:** the script looks for Deadlock in the Steam library folder, and falls back to the location of a running `deadlock.exe`. If both fail, pass the folder yourself:
+**Finding the game:** the script looks for Deadlock in the Steam library folder (by default `C:\Program Files (x86)\Steam\steamapps\common\Deadlock\game\bin\win64\deadlock.exe`), and falls back to the location of a running `deadlock.exe`. If both fail, pass the folder yourself:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File DeadlockLoadingFix.ps1 -GamePath "D:\SteamLibrary\steamapps\common\Deadlock"
