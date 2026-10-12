@@ -1,5 +1,7 @@
 # deadlock-vpn-loading-fix
 
+![Deadlock's endless loading screen animation](assets/loading-screen.webp)
+
 This repo provides two fixes for Deadlock's _"stuck on loading screen"_ bug, which happens mostly because of VPN's and their split tunneling feature.
 
 These two fixes are based around using the cheat command: `sv_cheats 1; restart`:
