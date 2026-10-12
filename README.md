@@ -43,12 +43,24 @@ I myself use Mullvad on Win 11 and it's [driver documentation](https://github.co
 
 Deadlock tries to do this but fails. This results in the endless loading screen. The console command `restart` reloads the hideout in a way that gets past the hang, so the fix binds it to a key.
 
+## Download
+
+Get the files from the [latest release](https://github.com/Jan-Eric-B/deadlock-vpn-loading-fix/releases/latest):
+
+1. Open the [latest release](https://github.com/Jan-Eric-B/deadlock-vpn-loading-fix/releases/latest) page.
+2. Scroll down to **Assets**.
+3. Click a file to download it:
+   - `autoexec.cfg` for **Fix 1**
+   - `auto-fix.zip` for **Fix 2**
+
+You don't need a GitHub account, and you don't need the green **Code** button.
+
 ## Fix 1: press F9 (recommended)
 
 1. Find your Deadlock folder: in Steam, right-click **Deadlock** → **Manage** → **Browse local files**.
    With a default Steam install, this is `C:\Program Files (x86)\Steam\steamapps\common\Deadlock`.
 2. Open `game\citadel\cfg\` (by default `C:\Program Files (x86)\Steam\steamapps\common\Deadlock\game\citadel\cfg\`).
-3. Copy [`autoexec.cfg`](autoexec.cfg) from this repository into that folder.
+3. [Download](#download) `autoexec.cfg` and copy it into that folder.
    If an `autoexec.cfg` already exists, open it and add this line instead of replacing the file:
    ```
    bind "F9" "sv_cheats 1; restart"
@@ -66,7 +78,7 @@ Deadlock runs `autoexec.cfg` automatically on every start. Steam updates and _"V
 
 1. Set up Fix 1.
 2. In Steam, right-click **Deadlock** → **Properties** → **Launch options**, and add `-condebug`. This makes the game write its console to `game\citadel\console.log`, which the script reads.
-3. Download the `auto-fix` folder anywhere you like.
+3. [Download](#download) `auto-fix.zip`, then right-click it → **Extract All...** and extract it anywhere you like.
 4. Double-click **`Start Deadlock (loading fix).cmd`** to start the game. The minimized PowerShell window shows what the script is doing:
    ```
    [21:40:47] Deadlock folder: C:\...\steamapps\common\Deadlock
